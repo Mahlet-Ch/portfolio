@@ -3,14 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Mahlet Chanyalew — Front-End Web Developer based in Dessie, Ethiopia. Building modern, responsive websites and AI-powered projects."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Your CSS files -->
     <link rel="stylesheet" href="./css/home.css" />
     <link rel="stylesheet" href="./css/about.css" />
     <link rel="stylesheet" href="./css/skills.css" />
     <link rel="stylesheet" href="./css/projects.css" />
     <link rel="stylesheet" href="./css/contact.css" />
-    <title>Mahlet Portfolio</title>
+
+    <title>Mahlet Chanyalew | Web Developer</title>
   </head>
   <body>
+    <!-- Scroll progress bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
     <!-- Header Section -->
     <header id="header" class="header">
       <nav class="nav">
@@ -18,7 +34,7 @@
           <div class="logo">
             <h3><span>M</span>ahlet</h3>
           </div>
-          <div class="nav-toggle" id="navToggle">
+          <div class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
@@ -45,22 +61,43 @@
 
       <div class="hero">
         <div class="hero-content">
-          <div class="name">
+          <div class="name reveal">
+            <p class="eyebrow">Hello, welcome to my portfolio</p>
             <h1>Hi, I'm <span>Mahlet</span></h1>
-            <h2>A Front-End Web Developer</h2>
+            <h2 class="typed-line">
+              <span id="typedText"></span><span class="cursor">|</span>
+            </h2>
             <p>
-              I'm Mahlet Chanyalew, a Front-End Website Developer based in
-              Dessie, Ethiopia. I specialize in creating admirable and amazing
-              websites with modern design principles.
+              I'm Mahlet Chanyalew, a Web Developer based in Dessie, Ethiopia. I
+              build modern, responsive, and user-friendly websites that blend
+              clean design with smooth, purposeful interaction.
             </p>
-            <div class="link">
-              <a href="#contacts">Contact me</a>
+            <div class="hero-actions">
+              <a href="#contacts" class="btn btn-primary">Contact Me</a>
+              <a href="#projects" class="btn btn-ghost">View Projects</a>
+            </div>
+            <div class="hero-stats">
+              <div class="stat"><strong></strong><span>Projects</span></div>
+              <div class="stat"><strong></strong><span>Certificates</span></div>
+              <div class="stat">
+                <strong></strong><span>Years Learning</span>
+              </div>
             </div>
           </div>
-          <div class="hero-image">
-            <img src="image/pic 2.jpg" alt="Mahlet Profile" />
+
+          <!-- Updated Hero Image with Morphing Shape & Badge -->
+          <div class="hero-image reveal">
+            <div class="image-glow"></div>
+            <div class="hero-img-wrapper">
+              <img src="image/My-photo.jpg" alt="Mahlet Chanyalew" />
+            </div>
+            <div class="floating-badge"><i class="fa fa-code"></i> Web Dev</div>
           </div>
         </div>
+      </div>
+
+      <div class="scroll-cue" aria-hidden="true">
+        <span></span>
       </div>
     </header>
 
@@ -68,122 +105,332 @@
     <section id="about" class="about">
       <div class="container">
         <div class="main">
-          <div class="image">
-            <img src="image/new.jpg" alt="About Mahlet" />
+          <div class="image reveal">
+            <img src="image/My photo-2.jpg" alt="About Mahlet" />
           </div>
-          <div class="head">
+          <div class="head reveal">
             <h1><span>About</span> Me</h1>
-            <h2>Front-End <span>Developer</span></h2>
+            <h2>Front-End <span>Developer</span> &amp; AI Intern</h2>
             <p>
-              I'm a Front-End Website Developer based in Dessie, Ethiopia. I
-              design and develop admirable and professional websites for myself
-              and for my clients. I'm continuously working to expand my skills
-              and take on new challenges. I've earned certificate from Udacity
-              online course and I'm learning in Andalus Coding Academy . I'm
-              dedicated to further developing my abilities and taking on more
-              complex projects in the future.
+              I'm a Web Developer and Software Engineering student at Wollo
+              University (KIOT Campus). I design and develop professional,
+              responsive websites for individuals and companies. I'm certified
+              by Udacity in Web Development and currently training at Andalus
+              Coding Academy while expanding into Back-End Development and
+              Social Media Marketing at Khelix Academy.
             </p>
+            <p>
+              Beyond code, I'm an educational content creator, video editor, and
+              AI-generated video creator for YouTube. I also serve as an
+              Artificial Intelligence Intern at Decodelabs, building AI-powered
+              projects with Python, pandas, and scikit-learn.
+            </p>
+            <div class="about-highlights">
+              <div class="highlight">
+                <i class="fa fa-graduation-cap"></i
+                ><span>Software Engineering Student</span>
+              </div>
+              <div class="highlight">
+                <i class="fa fa-certificate"></i><span>Udacity Certified</span>
+              </div>
+              <div class="highlight">
+                <i class="fa fa-robot"></i
+                ><span>Remote Intern At Different Companies </span>
+              </div>
+            </div>
             <div class="linkk">
-              <a href="#projects">Read More</a>
+              <a href="#projects">Explore My Work</a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Skills Section (UPDATED DESIGN) -->
     <!-- Skills Section -->
     <section id="skills" class="skills">
       <div class="container">
-        <div class="start">
-          <h1>My <span>Skills</span></h1>
+        <div class="start reveal">
+          <h2 class="section-title">My <span>Skills</span> & Education</h2>
+          <p class="section-sub">
+            The technologies I use and the journey that brought me here.
+          </p>
         </div>
-        <div class="box">
-          <div class="heading">
-            <h2>Technical Skills</h2>
-            <div class="skill-items">
-              <div class="skill-item">HTML</div>
-              <div class="skill-item">CSS</div>
-              <div class="skill-item">JavaScript</div>
-              <div class="skill-item">React</div>
-              <div class="skill-item">Responsive Design</div>
-            </div>
-          </div>
-          <div class="heading">
-            <h2>Experience</h2>
-            <div class="skill-items">
-              <div class="skill-item">Creating websites for Hotels</div>
-              <div class="skill-item">Developing portfolio websites</div>
-              <div class="skill-item">Company website development</div>
-            </div>
-          </div>
-          <div class="heading">
-            <h2>Education</h2>
-            <div class="skill-items">
-              <div class="skill-item">
-                Software Engineering at Wollo University
+
+        <div class="skills-layout">
+          <!-- LEFT SIDE: Tech Stack Icons -->
+          <div class="tech-stack reveal">
+            <h3><i class="fa fa-code"></i> Tech Stack</h3>
+            <div class="tech-grid">
+              <div class="tech-item">
+                <i class="fab fa-html5" style="color: #e34f26"></i>
+                <span>HTML5</span>
               </div>
-              <div class="skill-item">Andalus Coding Academy</div>
-              <div class="skill-item">Udacity Online Courses</div>
+              <div class="tech-item">
+                <i class="fab fa-css3-alt" style="color: #264de4"></i>
+                <span>CSS3</span>
+              </div>
+              <div class="tech-item">
+                <i class="fab fa-js" style="color: #f7df1e"></i>
+                <span>JavaScript</span>
+              </div>
+              <div class="tech-item">
+                <i class="fab fa-react" style="color: #61dafb"></i>
+                <span>React</span>
+              </div>
+              <div class="tech-item">
+                <i class="fab fa-node-js" style="color: #68a063"></i>
+                <span>Node.js</span>
+              </div>
+              <div class="tech-item">
+                <i class="fab fa-python" style="color: #3776ab"></i>
+                <span>Python</span>
+              </div>
+              <div class="tech-item">
+                <i class="fas fa-database" style="color: #ff4500"></i>
+                <span>Django</span>
+              </div>
+              <div class="tech-item">
+                <i class="fab fa-git-alt" style="color: #f34f29"></i>
+                <span>Git</span>
+              </div>
+            </div>
+
+            <!-- Soft Skills Tags -->
+            <div class="soft-skills">
+              <h4>Professional Skills</h4>
+              <div class="skill-tags">
+                <span>Time Management</span>
+                <span>Communication</span>
+                <span>Video Editing</span>
+                <span>Content Creation</span>
+                <span>SMM</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT SIDE: Education Timeline -->
+          <div class="timeline-container reveal">
+            <h3><i class="fa fa-graduation-cap"></i> Education & Experience</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2024 - Present</div>
+                <div class="timeline-content">
+                  <h4>Software Engineering Student</h4>
+                  <p>Wollo University (KIOT Campus)</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2025 - Present</div>
+                <div class="timeline-content">
+                  <h4>Web Development Training</h4>
+                  <p>Andalus Coding Academy</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2024</div>
+                <div class="timeline-content">
+                  <h4>Front-End Certificate</h4>
+                  <p>Udacity Online Courses</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2026 - Present</div>
+                <div class="timeline-content">
+                  <h4>AI Intern</h4>
+                  <p>Decodelabs Organization</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Projects Section (UPDATED DESIGN) -->
     <section id="projects" class="projects">
       <div class="container">
-        <div class="pro-head">
-          <h1>My <span>Projects</span></h1>
+        <div class="pro-head reveal">
+          <h2 class="section-title">Featured <span>Projects</span></h2>
+          <p class="section-sub">
+            A selection of solo and team projects I've built.
+          </p>
         </div>
-        <div class="main-content">
-          <div class="work">
-            <img src="image/phone.jpg" alt="Hotel Website Project" />
-            <div class="layer">
-              <h3>Website Development For Hotels</h3>
+
+        <div class="projects-grid">
+          <div class="project-card reveal">
+            <div class="project-img">
+              <img src="image/hotel.jpg" alt="Hotel Website" />
+              <div class="project-overlay">
+                <a href="#" class="btn-icon" aria-label="View Project"
+                  ><i class="fa fa-external-link"></i
+                ></a>
+              </div>
+            </div>
+            <div class="project-info">
+              <span class="project-category">Solo Project</span>
+              <h3>Hotel & Restaurant Website</h3>
               <p>
-                Creating a Website for Hotels and Restaurants with beautiful
-                design. Users can reserve services anytime, anywhere.
+                A beautiful, responsive hotel website allowing guests to reserve
+                services anytime, anywhere.
               </p>
+              <div class="project-tech">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
             </div>
           </div>
-          <div class="work">
-            <img src="image/mobile.png" alt="Company Website Project" />
-            <div class="layer">
-              <h3>Developing Websites for Companies</h3>
+
+          <div class="project-card reveal">
+            <div class="project-img">
+              <img
+                src="image/student.jpg"
+                alt="Student Management System"
+                onerror="this.src = 'image/new.jpg'"
+              />
+              <div class="project-overlay">
+                <a href="#" class="btn-icon" aria-label="View Project"
+                  ><i class="fa fa-external-link"></i
+                ></a>
+              </div>
+            </div>
+            <div class="project-info">
+              <span class="project-category">Team Project</span>
+              <h3>Student Management System</h3>
               <p>
-                Creating professional websites for companies to enhance their
-                online presence and improve customer experience.
+                Full-stack application built with React on the frontend and
+                Django on the backend.
               </p>
+              <div class="project-tech">
+                <span>React</span><span>Django</span><span>Python</span>
+              </div>
             </div>
           </div>
-          <div class="work">
-            <img src="image/photo 2 (2).jpg" alt="Portfolio Website Project" />
-            <div class="layer">
-              <h3>Developing Portfolio Websites</h3>
+
+          <div class="project-card reveal">
+            <div class="project-img">
+              <img
+                src="image/tripful.jpg"
+                alt="Tripful Travel Website"
+                onerror="this.src = 'image/mobile.png'"
+              />
+              <div class="project-overlay">
+                <a href="#" class="btn-icon" aria-label="View Project"
+                  ><i class="fa fa-external-link"></i
+                ></a>
+              </div>
+            </div>
+            <div class="project-info">
+              <span class="project-category">Team Project</span>
+              <h3>Tripful Travel Website</h3>
               <p>
-                Creating personal portfolio websites with modern, responsive
-                designs that showcase skills and projects effectively.
+                A travel booking platform connecting users to amazing
+                destinations.
               </p>
+              <div class="project-tech">
+                <span>Node.js</span><span>React</span><span>Postgres</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card reveal">
+            <div class="project-img">
+              <img
+                src="image/inventory.jpg"
+                alt="Inventory Management System"
+                onerror="this.src = 'image/phone.jpg'"
+              />
+              <div class="project-overlay">
+                <a href="#" class="btn-icon" aria-label="View Project"
+                  ><i class="fa fa-external-link"></i
+                ></a>
+              </div>
+            </div>
+            <div class="project-info">
+              <span class="project-category">Team Project</span>
+              <h3>Inventory Management System</h3>
+              <p>
+                A system for tracking stock, suppliers, and orders with a clean,
+                intuitive dashboard.
+              </p>
+              <div class="project-tech">
+                <span>React</span><span>Java</span><span>MYSQL</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card reveal">
+            <div class="project-img">
+              <img src="image/portfolio.jpg" alt="Portfolio Website" />
+              <div class="project-overlay">
+                <a href="#" class="btn-icon" aria-label="View Project"
+                  ><i class="fa fa-external-link"></i
+                ></a>
+              </div>
+            </div>
+            <div class="project-info">
+              <span class="project-category">Solo Project</span>
+              <h3>Personal Portfolio</h3>
+              <p>
+                The very portfolio you are looking at right now, built with
+                modern design principles.
+              </p>
+              <div class="project-tech">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card reveal">
+            <div class="project-img">
+              <img
+                src="image/construction.jpg"
+                alt="Construction Company Website"
+              />
+              <div class="project-overlay">
+                <a href="#" class="btn-icon" aria-label="View Project"
+                  ><i class="fa fa-external-link"></i
+                ></a>
+              </div>
+            </div>
+            <div class="project-info">
+              <span class="project-category">Solo Project</span>
+              <h3>Construction Company Website</h3>
+              <p>
+                A professional corporate website for a construction company,
+                focused on trust and clarity.
+              </p>
+              <div class="project-tech">
+                <span>React</span><span>Responsive</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact Section (UPDATED WITH FORMSUBMIT) -->
     <section id="contacts" class="contacts">
       <div class="container">
-        <div class="main-head">
+        <div class="main-head reveal">
           <h1><span>Contact</span> Me</h1>
+          <p class="section-sub">
+            Have a project in mind? Let's build something great together.
+          </p>
         </div>
         <div class="contact-content">
-          <div class="content-left">
+          <div class="content-left reveal">
             <div class="contact-info">
               <p>
                 <a href="tel:+251972455363">
                   <i class="fa fa-phone-square" aria-hidden="true"></i>
-                  +251972455363
+                  +251 972 455 363
                 </a>
               </p>
               <p>
@@ -192,30 +439,59 @@
                   mahletchanyalew80@gmail.com
                 </a>
               </p>
+              <p>
+                <a href="#" onclick="return false;">
+                  <i class="fa fa-map-marker" aria-hidden="true"></i>
+                  Dessie, Ethiopia
+                </a>
+              </p>
             </div>
             <div class="social-media">
-              <a href="https://t.me/Hemennnnnn" aria-label="Telegram">
-                <i class="fa fa-telegram" aria-hidden="true"></i>
-              </a>
               <a
-                href="https://www.instagram.com/hema.chh/"
+                href="https://t.me/Kne_Mahlet"
+                aria-label="Telegram"
+                target="_blank"
+                rel="noopener"
+                ><i class="fa fa-telegram" aria-hidden="true"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/mahlet_chh/"
                 aria-label="Instagram"
-              >
-                <i class="fa fa-instagram" aria-hidden="true"></i>
-              </a>
+                target="_blank"
+                rel="noopener"
+                ><i class="fa fa-instagram" aria-hidden="true"></i
+              ></a>
               <a
-                href="https://www.linkedin.com/in/mahlet-chanyalew-8301b9358?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                href="https://www.linkedin.com/in/mahlet-chanyalew-8301b9358"
                 aria-label="LinkedIn"
-              >
-                <i class="fa fa-linkedin" aria-hidden="true"></i>
-              </a>
-              <a href="https://github.com/Mahlett2" aria-label="GitHub">
-                <i class="fa fa-github" aria-hidden="true"></i>
-              </a>
+                target="_blank"
+                rel="noopener"
+                ><i class="fa fa-linkedin" aria-hidden="true"></i
+              ></a>
+              <a
+                href="https://github.com/Mahlet-Ch"
+                aria-label="GitHub"
+                target="_blank"
+                rel="noopener"
+                ><i class="fa fa-github" aria-hidden="true"></i
+              ></a>
             </div>
           </div>
-          <div class="content-right">
-            <form action="submit.html" method="post">
+          <div class="content-right reveal">
+            <!-- Updated Form Action to point to FormSubmit -->
+            <form
+              id="contactForm"
+              action="https://formsubmit.co/mahletchanyalew80@gmail.com"
+              method="POST"
+            >
+              <input
+                type="hidden"
+                name="_subject"
+                value="New Message from Portfolio Website!"
+              />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="table" />
+
               <input type="text" name="Name" placeholder="Your Name" required />
               <input
                 type="email"
@@ -229,7 +505,8 @@
                 placeholder="Enter Your Message..."
                 required
               ></textarea>
-              <button>Submit</button>
+              <button type="submit">Send Message</button>
+              <p class="form-status" id="formStatus" aria-live="polite"></p>
             </form>
           </div>
         </div>
@@ -239,31 +516,23 @@
     <!-- Footer -->
     <footer>
       <div class="container">
-        <p>&copy; 2024 Mahlet Chanyalew - All Rights Reserved.</p>
+        <p>
+          &copy; <span id="year"></span> Mahlet Chanyalew — All Rights Reserved.
+        </p>
+        <p class="footer-note">
+          Designed &amp; built with care in Dessie, Ethiopia.
+        </p>
       </div>
     </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+      ↑
+    </button>
 
     <script
       src="https://kit.fontawesome.com/aacfa46e5f.js"
       crossorigin="anonymous"
     ></script>
-    <script>
-      // Mobile Navigation Toggle
-      const navToggle = document.getElementById("navToggle");
-      const navMenu = document.getElementById("navMenu");
-
-      navToggle.addEventListener("click", () => {
-        navMenu.classList.toggle("active");
-        navToggle.classList.toggle("active");
-      });
-
-      // Close mobile menu when clicking on a link
-      document.querySelectorAll(".nav-link").forEach((link) => {
-        link.addEventListener("click", () => {
-          navMenu.classList.remove("active");
-          navToggle.classList.remove("active");
-        });
-      });
-    </script>
+    <script src="./js/main.js"></script>
   </body>
 </html>

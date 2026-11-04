@@ -1,105 +1,159 @@
 #about {
-  padding: 100px 0;
-  color: white;
-  background-color: black;
+  padding: 110px 0;
+  color: #fff;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1410 100%);
 }
 
 .main {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 60px;
 }
 
 .image {
   flex: 1;
   display: flex;
   justify-content: center;
+  position: relative;
+}
+
+.image::before {
+  content: "";
+  position: absolute;
+  inset: 10% 8%;
+  border-radius: 30px;
+  background: radial-gradient(circle, rgba(255, 69, 0, 0.35), transparent 70%);
+  filter: blur(40px);
+  z-index: 0;
 }
 
 .image img {
+  position: relative;
+  z-index: 1;
   width: 100%;
   max-width: 400px;
   height: auto;
-  border-radius: 50%;
-  box-shadow: 0 0 10px orangered, 0 0 15px orangered;
-  transition: 0.3s ease;
-  animation: float 3s ease-in-out infinite;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: top center;
+  /* Clean, modern rounded corners */
+  border-radius: 24px;
+  /* The offset border effect */
+  box-shadow: -20px 20px 0px rgba(255, 69, 0, 0.15);
+  transition:
+    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.5s ease;
 }
 
 .image:hover img {
-  box-shadow: 0 0 10px powderblue, 0 0 15px powderblue;
+  transform: translate(10px, -10px);
+  box-shadow: -30px 30px 0px var(--accent);
 }
 
 .head {
-  flex: 1;
-  padding: 20px;
+  flex: 1.2;
+  padding: 10px;
 }
 
 .head h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
+  font-family: "Playfair Display", serif;
+  font-size: 40px;
+  margin-bottom: 14px;
 }
 
 .head h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 22px;
+  color: #ccc;
 }
 
 .head p {
-  font-size: 18px;
-  line-height: 1.7;
-  margin-bottom: 30px;
+  font-size: 16.5px;
+  line-height: 1.85;
+  margin-bottom: 20px;
+  color: #d5d5d5;
 }
 
 .head span {
-  color: rgb(253, 57, 3);
+  color: var(--accent);
+}
+
+.about-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 26px 0 30px;
+}
+
+.highlight {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 14px;
+  color: #eee;
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.highlight:hover {
+  background: rgba(255, 69, 0, 0.15);
+  transform: translateY(-3px);
+}
+
+.highlight i {
+  color: var(--accent);
 }
 
 .linkk {
   display: inline-block;
-  padding: 12px 30px;
-  font-size: 18px;
-  background: orangered;
-  border-radius: 10px;
+  padding: 13px 34px;
+  background: var(--accent);
+  border-radius: 50px;
   text-align: center;
-  transition: background 0.3s;
+  transition:
+    background 0.35s ease,
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+  box-shadow: 0 8px 24px rgba(255, 69, 0, 0.3);
 }
 
 .linkk a {
   text-decoration: none;
-  color: black;
-  font-weight: bold;
+  color: #0a0a0a;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
 }
 
 .linkk:hover {
-  background: purple;
+  background: var(--plum);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(135, 35, 81, 0.45);
 }
 
 .linkk:hover a {
-  color: white;
+  color: #fff;
 }
 
-@keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-15px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-/* Responsive Design */
 @media only screen and (max-width: 992px) {
   .main {
     flex-direction: column;
     text-align: center;
+    gap: 40px;
   }
 
   .head {
-    padding: 20px 0;
+    padding: 0;
+  }
+  .about-highlights {
+    justify-content: center;
   }
 }
 
@@ -107,22 +161,17 @@
   #about {
     padding: 80px 0;
   }
-
   .head h1 {
     font-size: 32px;
   }
-
   .head h2 {
-    font-size: 24px;
+    font-size: 19px;
   }
-
   .head p {
-    font-size: 16px;
+    font-size: 15.5px;
   }
-
   .linkk {
-    padding: 10px 25px;
-    font-size: 16px;
+    padding: 11px 26px;
   }
 }
 
@@ -130,12 +179,10 @@
   .head h1 {
     font-size: 28px;
   }
-
   .head h2 {
-    font-size: 20px;
+    font-size: 17px;
   }
-
   .image img {
-    max-width: 300px;
+    max-width: 280px;
   }
 }
