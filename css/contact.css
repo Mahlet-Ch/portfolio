@@ -1,7 +1,10 @@
 .contacts {
   padding: 110px 0;
   color: var(--text-dark);
-  background: #fff;
+  background: var(--bg-soft); /* Light gray in light mode */
+  transition: background-color 0.4s ease;
+  /* Add this line for a perfectly crisp top edge */
+  border-top: 1px solid var(--border-color);
 }
 
 .main-head {
@@ -83,14 +86,14 @@
 .social-media a {
   text-decoration: none;
   font-size: 26px;
-  color: #5a3a2e;
+  color: var(--text-dark);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: rgba(255, 69, 0, 0.06);
+  background: var(--bg-main);
   transition:
     transform 0.4s ease,
     color 0.3s ease,
@@ -105,11 +108,14 @@
 
 .content-right form {
   width: 100%;
-  background: #fff;
+  background: var(--card-bg);
   padding: 28px;
   border-radius: var(--radius);
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
-  border: 1px solid #eee;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
+  transition:
+    background-color 0.4s ease,
+    border-color 0.4s ease;
 }
 
 form input,
@@ -118,7 +124,7 @@ form button {
   width: 100%;
   border: 1px solid transparent;
   outline: none;
-  background: #f2f0ee;
+  background: var(--bg-soft);
   padding: 15px 18px;
   margin: 10px 0;
   color: var(--text-dark);
@@ -134,7 +140,7 @@ form button {
 form input:focus,
 form textarea:focus {
   border-color: var(--accent);
-  background: #fff;
+  background: var(--card-bg);
   box-shadow: 0 0 0 3px rgba(255, 69, 0, 0.12);
 }
 

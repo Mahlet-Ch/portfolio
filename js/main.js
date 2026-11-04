@@ -92,10 +92,10 @@
   // 6. Typed Text Effect
   const typedEl = document.getElementById("typedText");
   const phrases = [
-    "A Front-End Web Developer",
+    "A Web Developer",
     "A React & Django Developer",
-    "A Remote Intern at Different Online Companies",
-    "A Content Creator & Video Editor",
+    "An AI Intern",
+    "A Content Creator",
   ];
 
   if (typedEl) {
@@ -195,4 +195,29 @@
       }
     });
   });
+
+  // 10. Dark / Light Mode Toggle
+  const themeToggle = document.getElementById("theme-toggle");
+  const htmlElement = document.documentElement;
+
+  const savedTheme = localStorage.getItem("theme");
+  const systemPrefersDark = window.matchMedia(
+    "(prefers-color-scheme: dark)",
+  ).matches;
+
+  if (savedTheme === "dark" || (!savedTheme && systemPrefersDark)) {
+    htmlElement.setAttribute("data-theme", "dark");
+  } else {
+    htmlElement.setAttribute("data-theme", "light");
+  }
+
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      const currentTheme = htmlElement.getAttribute("data-theme");
+      const newTheme = currentTheme === "dark" ? "light" : "dark";
+
+      htmlElement.setAttribute("data-theme", newTheme);
+      localStorage.setItem("theme", newTheme);
+    });
+  }
 })();

@@ -1,7 +1,8 @@
 #about {
   padding: 110px 0;
-  color: #fff;
-  background: linear-gradient(135deg, #0a0a0a 0%, #1a1410 100%);
+  color: var(--text-dark);
+  background: var(--bg-soft);
+  transition: background-color 0.4s ease;
 }
 
 .main {
@@ -36,9 +37,7 @@
   aspect-ratio: 4 / 5;
   object-fit: cover;
   object-position: top center;
-  /* Clean, modern rounded corners */
   border-radius: 24px;
-  /* The offset border effect */
   box-shadow: -20px 20px 0px rgba(255, 69, 0, 0.15);
   transition:
     transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
@@ -66,14 +65,14 @@
   font-size: 22px;
   font-weight: 500;
   margin-bottom: 22px;
-  color: #ccc;
+  color: var(--text-muted);
 }
 
 .head p {
   font-size: 16.5px;
   line-height: 1.85;
   margin-bottom: 20px;
-  color: #d5d5d5;
+  color: var(--text-dark);
 }
 
 .head span {
@@ -93,10 +92,10 @@
   gap: 10px;
   padding: 10px 16px;
   border-radius: 50px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--bg-main);
+  border: 1px solid var(--border-color);
   font-size: 14px;
-  color: #eee;
+  color: var(--text-dark);
   transition:
     background 0.3s ease,
     transform 0.3s ease;
@@ -142,13 +141,27 @@
   color: #fff;
 }
 
+/* CV Button Hover Effect */
+.linkk[style*="transparent"] {
+  transition: all 0.3s ease;
+}
+
+.linkk[style*="transparent"]:hover {
+  background: var(--accent) !important;
+  border-color: var(--accent) !important;
+  box-shadow: 0 8px 24px rgba(255, 69, 0, 0.3) !important;
+}
+
+.linkk[style*="transparent"]:hover a {
+  color: #ffffff !important;
+}
+
 @media only screen and (max-width: 992px) {
   .main {
     flex-direction: column;
     text-align: center;
     gap: 40px;
   }
-
   .head {
     padding: 0;
   }

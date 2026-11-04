@@ -1,0 +1,81 @@
+.services {
+  padding: 110px 0;
+  background: var(--bg-main);
+  position: relative;
+  transition: background-color 0.4s ease;
+  border-top: 1px solid var(--border-color);
+  /* Add this line to create a clean cut-off at the bottom */
+  border-bottom: 1px solid var(--border-color);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.service-card {
+  /* The cards themselves will be the soft background color to pop out */
+  background: var(--bg-soft);
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
+  text-align: center;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(255, 69, 0, 0.1);
+  border-color: var(--accent);
+}
+
+.service-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  background: rgba(255, 69, 0, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: var(--accent);
+  transition:
+    transform 0.4s ease,
+    background 0.4s ease;
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.1) rotate(5deg);
+  background: var(--accent);
+  color: #fff;
+}
+
+.service-card h3 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: var(--text-dark);
+}
+
+.service-card p {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media only screen and (max-width: 768px) {
+  .services {
+    padding: 80px 0;
+  }
+  .service-card {
+    padding: 30px 20px;
+  }
+}

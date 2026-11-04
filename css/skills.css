@@ -1,10 +1,11 @@
 .skills {
   padding: 110px 0;
-  background: var(--bg-soft);
+  background: var(--bg-soft); /* Light gray */
   position: relative;
+  transition: background-color 0.4s ease;
+  /* Add this line to create a clean cut-off at the bottom */
+  border-bottom: 1px solid var(--border-color);
 }
-
-/* Glowing background effect */
 .skills::before {
   content: "";
   position: absolute;
@@ -22,6 +23,12 @@
   pointer-events: none;
 }
 
+/* Make sure the content stays above the glowing background */
+.skills .container {
+  position: relative;
+  z-index: 1;
+}
+
 .start {
   text-align: center;
   margin-bottom: 60px;
@@ -33,6 +40,7 @@
   font-family: "Playfair Display", serif;
   font-size: 42px;
   margin-bottom: 10px;
+  color: var(--text-dark);
 }
 
 .section-title span {
@@ -68,13 +76,15 @@
   color: var(--accent);
 }
 
-/* --- Left Side: Tech Stack Grid --- */
 .tech-stack {
-  background: #fff;
+  background: var(--card-bg);
   padding: 40px;
   border-radius: 20px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
-  border: 1px solid rgba(0, 0, 0, 0.03);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
+  transition:
+    background-color 0.4s ease,
+    border-color 0.4s ease;
 }
 
 .tech-grid {
@@ -93,7 +103,7 @@
   padding: 20px 10px;
   background: var(--bg-soft);
   border-radius: 16px;
-  border: 1px solid #eee;
+  border: 1px solid var(--border-color);
   transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
   cursor: default;
 }
@@ -107,12 +117,12 @@
   font-family: "Space Grotesk", sans-serif;
   font-size: 13px;
   font-weight: 600;
-  color: var(--text-muted);
+  color: var(--text-dark);
   transition: color 0.3s ease;
 }
 
 .tech-item:hover {
-  background: #fff;
+  background: var(--card-bg);
   transform: translateY(-8px);
   box-shadow: 0 15px 30px rgba(255, 69, 0, 0.15);
   border-color: rgba(255, 69, 0, 0.2);
@@ -122,13 +132,8 @@
   transform: scale(1.2) rotate(5deg);
 }
 
-.tech-item:hover span {
-  color: var(--text-dark);
-}
-
-/* --- Soft Skills Tags --- */
 .soft-skills {
-  border-top: 1px dashed #ddd;
+  border-top: 1px dashed var(--border-color);
   padding-top: 30px;
 }
 
@@ -162,19 +167,21 @@
   transform: translateY(-2px);
 }
 
-/* --- Right Side: Education Timeline --- */
 .timeline-container {
-  background: #fff;
+  background: var(--card-bg);
   padding: 40px;
   border-radius: 20px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
-  border: 1px solid rgba(0, 0, 0, 0.03);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
+  transition:
+    background-color 0.4s ease,
+    border-color 0.4s ease;
 }
 
 .timeline {
   position: relative;
   padding-left: 30px;
-  border-left: 2px solid #eee;
+  border-left: 2px solid var(--border-color);
 }
 
 .timeline-item {
@@ -194,7 +201,7 @@
   height: 14px;
   border-radius: 50%;
   background: var(--accent);
-  border: 3px solid #fff;
+  border: 3px solid var(--card-bg);
   box-shadow: 0 0 0 3px rgba(255, 69, 0, 0.2);
   transition: all 0.3s ease;
 }
@@ -227,7 +234,6 @@
   color: var(--text-muted);
 }
 
-/* --- Responsive --- */
 @media only screen and (max-width: 992px) {
   .skills-layout {
     grid-template-columns: 1fr;

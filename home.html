@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,6 +7,16 @@
       name="description"
       content="Mahlet Chanyalew — Front-End Web Developer based in Dessie, Ethiopia. Building modern, responsive websites and AI-powered projects."
     />
+
+    <!-- SEO & Social Media Preview (Upgrade #5) -->
+    <meta property="og:title" content="Mahlet Chanyalew | Web Developer" />
+    <meta
+      property="og:description"
+      content="I build modern, responsive, and user-friendly websites that blend clean design with smooth interaction."
+    />
+    <meta property="og:image" content="image/My-photo.jpg" />
+    <meta property="og:type" content="website" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,6 +27,7 @@
     <!-- Your CSS files -->
     <link rel="stylesheet" href="./css/home.css" />
     <link rel="stylesheet" href="./css/about.css" />
+    <link rel="stylesheet" href="./css/services.css" />
     <link rel="stylesheet" href="./css/skills.css" />
     <link rel="stylesheet" href="./css/projects.css" />
     <link rel="stylesheet" href="./css/contact.css" />
@@ -34,28 +45,48 @@
           <div class="logo">
             <h3><span>M</span>ahlet</h3>
           </div>
-          <div class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+
+          <div class="nav-right">
+            <ul class="nav-menu" id="navMenu">
+              <li class="nav-item">
+                <a href="#header" class="nav-link"><span>Home</span></a>
+              </li>
+              <li class="nav-item">
+                <a href="#about" class="nav-link">About Me</a>
+              </li>
+              <li class="nav-item">
+                <a href="#services" class="nav-link">Services</a>
+              </li>
+              <li class="nav-item">
+                <a href="#skills" class="nav-link">Skills</a>
+              </li>
+              <li class="nav-item">
+                <a href="#projects" class="nav-link">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a href="#contacts" class="nav-link">Contacts</a>
+              </li>
+            </ul>
+
+            <!-- Theme Toggle Button -->
+            <button
+              id="theme-toggle"
+              class="theme-toggle"
+              aria-label="Toggle Dark/Light Mode"
+            >
+              <i class="fas fa-moon"></i>
+            </button>
+
+            <div
+              class="nav-toggle"
+              id="navToggle"
+              aria-label="Toggle navigation"
+            >
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
           </div>
-          <ul class="nav-menu" id="navMenu">
-            <li class="nav-item">
-              <a href="#header" class="nav-link"><span>Home</span></a>
-            </li>
-            <li class="nav-item">
-              <a href="#about" class="nav-link">About Me</a>
-            </li>
-            <li class="nav-item">
-              <a href="#skills" class="nav-link">Skills</a>
-            </li>
-            <li class="nav-item">
-              <a href="#projects" class="nav-link">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a href="#contacts" class="nav-link">Contacts</a>
-            </li>
-          </ul>
         </div>
       </nav>
 
@@ -77,10 +108,12 @@
               <a href="#projects" class="btn btn-ghost">View Projects</a>
             </div>
             <div class="hero-stats">
-              <div class="stat"><strong></strong><span>Projects</span></div>
-              <div class="stat"><strong></strong><span>Certificates</span></div>
+              <div class="stat"><strong>8+</strong><span>Projects</span></div>
               <div class="stat">
-                <strong></strong><span>Years Learning</span>
+                <strong>4</strong><span>Certificates</span>
+              </div>
+              <div class="stat">
+                <strong>2+</strong><span>Years Learning</span>
               </div>
             </div>
           </div>
@@ -138,15 +171,94 @@
                 ><span>Remote Intern At Different Companies </span>
               </div>
             </div>
-            <div class="linkk">
-              <a href="#projects">Explore My Work</a>
+
+            <!-- UPDATED: Buttons with Download CV -->
+            <div
+              class="about-buttons"
+              style="display: flex; gap: 15px; flex-wrap: wrap"
+            >
+              <div class="linkk">
+                <a href="#projects">Explore My Work</a>
+              </div>
+              <div
+                class="linkk"
+                style="
+                  background: transparent;
+                  border: 2px solid var(--accent);
+                  box-shadow: none;
+                "
+              >
+                <!-- If using the file path: -->
+                <!-- <a href="file:///C:/Users/Mahlet/OneDrive/Documents/Mahlet's Resume.pdf" download style="color: var(--accent);">Download CV</a> -->
+
+                <!-- Recommended: If you move the PDF into your project folder -->
+                <a
+                  href="Mahlet's Resume.pdf"
+                  download
+                  style="color: var(--accent)"
+                  >Download CV</a
+                >
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Skills Section (UPDATED DESIGN) -->
+    <!-- Services Section -->
+    <section id="services" class="services">
+      <div class="container">
+        <div class="start reveal">
+          <h2 class="section-title">What I <span>Do</span></h2>
+          <p class="section-sub">
+            Beyond code, I bring your brand to life across all digital
+            platforms.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Service 1 -->
+          <div class="service-card reveal">
+            <div class="service-icon">
+              <i class="fa fa-laptop-code"></i>
+            </div>
+            <h3>Web Development</h3>
+            <p>
+              I build modern, responsive, and fast websites using React, HTML,
+              CSS, and JavaScript. Whether it's a portfolio, a business site, or
+              a full-stack app, I bring your ideas to life.
+            </p>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="service-card reveal">
+            <div class="service-icon">
+              <i class="fa fa-video"></i>
+            </div>
+            <h3>Content & Video Editing</h3>
+            <p>
+              From educational content to AI-generated videos for YouTube, I
+              edit and optimize videos that grab attention. I also create
+              engaging digital content that tells your story.
+            </p>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="service-card reveal">
+            <div class="service-icon">
+              <i class="fa fa-bullhorn"></i>
+            </div>
+            <h3>Social Media Management</h3>
+            <p>
+              I help brands grow their online presence by managing their social
+              media accounts, creating strategies, and posting engaging content
+              on Instagram, Telegram, and LinkedIn.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Skills Section -->
     <section id="skills" class="skills">
       <div class="container">
@@ -254,7 +366,7 @@
       </div>
     </section>
 
-    <!-- Projects Section (UPDATED DESIGN) -->
+    <!-- Projects Section -->
     <section id="projects" class="projects">
       <div class="container">
         <div class="pro-head reveal">
@@ -265,13 +377,21 @@
         </div>
 
         <div class="projects-grid">
+          <!-- Project 1: Hotel Website -->
           <div class="project-card reveal">
             <div class="project-img">
               <img src="image/hotel.jpg" alt="Hotel Website" />
               <div class="project-overlay">
-                <a href="#" class="btn-icon" aria-label="View Project"
-                  ><i class="fa fa-external-link"></i
-                ></a>
+                <!-- Replace the link below with your live hotel website URL if you have one -->
+                <a
+                  href="https://github.com/Mahlet-Ch"
+                  target="_blank"
+                  rel="noopener"
+                  class="btn-icon"
+                  aria-label="View Project"
+                >
+                  <i class="fa fa-external-link"></i>
+                </a>
               </div>
             </div>
             <div class="project-info">
@@ -287,6 +407,7 @@
             </div>
           </div>
 
+          <!-- Project 2: Student Management -->
           <div class="project-card reveal">
             <div class="project-img">
               <img
@@ -295,9 +416,16 @@
                 onerror="this.src = 'image/new.jpg'"
               />
               <div class="project-overlay">
-                <a href="#" class="btn-icon" aria-label="View Project"
-                  ><i class="fa fa-external-link"></i
-                ></a>
+                <!-- Replace the link below with your Student System GitHub repo -->
+                <a
+                  href="https://github.com/Mahlet-Ch/Student-Management-System"
+                  target="_blank"
+                  rel="noopener"
+                  class="btn-icon"
+                  aria-label="View Project"
+                >
+                  <i class="fa fa-external-link"></i>
+                </a>
               </div>
             </div>
             <div class="project-info">
@@ -313,6 +441,7 @@
             </div>
           </div>
 
+          <!-- Project 3: Tripful -->
           <div class="project-card reveal">
             <div class="project-img">
               <img
@@ -321,9 +450,16 @@
                 onerror="this.src = 'image/mobile.png'"
               />
               <div class="project-overlay">
-                <a href="#" class="btn-icon" aria-label="View Project"
-                  ><i class="fa fa-external-link"></i
-                ></a>
+                <!-- Replace the link below with your Tripful GitHub repo -->
+                <a
+                  href="https://github.com/muradbzuneh/Tripful-travel-agency"
+                  target="_blank"
+                  rel="noopener"
+                  class="btn-icon"
+                  aria-label="View Project"
+                >
+                  <i class="fa fa-external-link"></i>
+                </a>
               </div>
             </div>
             <div class="project-info">
@@ -339,6 +475,7 @@
             </div>
           </div>
 
+          <!-- Project 4: Inventory -->
           <div class="project-card reveal">
             <div class="project-img">
               <img
@@ -347,9 +484,16 @@
                 onerror="this.src = 'image/phone.jpg'"
               />
               <div class="project-overlay">
-                <a href="#" class="btn-icon" aria-label="View Project"
-                  ><i class="fa fa-external-link"></i
-                ></a>
+                <!-- Replace the link below with your Inventory GitHub repo -->
+                <a
+                  href="https://github.com/Mena-M16/Inventory-Management-System"
+                  target="_blank"
+                  rel="noopener"
+                  class="btn-icon"
+                  aria-label="View Project"
+                >
+                  <i class="fa fa-external-link"></i>
+                </a>
               </div>
             </div>
             <div class="project-info">
@@ -365,13 +509,19 @@
             </div>
           </div>
 
+          <!-- Project 5: Portfolio -->
           <div class="project-card reveal">
             <div class="project-img">
               <img src="image/portfolio.jpg" alt="Portfolio Website" />
               <div class="project-overlay">
-                <a href="#" class="btn-icon" aria-label="View Project"
-                  ><i class="fa fa-external-link"></i
-                ></a>
+                <!-- This one can link to the live site you are on right now, or leave as # -->
+                <a
+                  href="https://github.com/Mahlet-Ch/portfolio"
+                  class="btn-icon"
+                  aria-label="View Project"
+                >
+                  <i class="fa fa-external-link"></i>
+                </a>
               </div>
             </div>
             <div class="project-info">
@@ -387,6 +537,7 @@
             </div>
           </div>
 
+          <!-- Project 6: Construction -->
           <div class="project-card reveal">
             <div class="project-img">
               <img
@@ -394,9 +545,16 @@
                 alt="Construction Company Website"
               />
               <div class="project-overlay">
-                <a href="#" class="btn-icon" aria-label="View Project"
-                  ><i class="fa fa-external-link"></i
-                ></a>
+                <!-- Replace the link below with your Construction GitHub repo -->
+                <a
+                  href="https://github.com/Mahlet-Ch/Cloning-HTML-CSS"
+                  target="_blank"
+                  rel="noopener"
+                  class="btn-icon"
+                  aria-label="View Project"
+                >
+                  <i class="fa fa-external-link"></i>
+                </a>
               </div>
             </div>
             <div class="project-info">
@@ -415,7 +573,7 @@
       </div>
     </section>
 
-    <!-- Contact Section (UPDATED WITH FORMSUBMIT) -->
+    <!-- Contact Section -->
     <section id="contacts" class="contacts">
       <div class="container">
         <div class="main-head reveal">
@@ -478,7 +636,6 @@
             </div>
           </div>
           <div class="content-right reveal">
-            <!-- Updated Form Action to point to FormSubmit -->
             <form
               id="contactForm"
               action="https://formsubmit.co/mahletchanyalew80@gmail.com"
