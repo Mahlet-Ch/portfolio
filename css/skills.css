@@ -3,7 +3,6 @@
   background: var(--bg-soft); /* Light gray */
   position: relative;
   transition: background-color 0.4s ease;
-  /* Add this line to create a clean cut-off at the bottom */
   border-bottom: 1px solid var(--border-color);
 }
 .skills::before {
@@ -23,7 +22,6 @@
   pointer-events: none;
 }
 
-/* Make sure the content stays above the glowing background */
 .skills .container {
   position: relative;
   z-index: 1;

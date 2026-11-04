@@ -80,7 +80,6 @@ img {
    HEADER & HERO (ALWAYS DARK)
    ========================================= */
 .header {
-  /* Keeps the beautiful dark glowing background at all times */
   background: radial-gradient(circle at 20% 20%, #1a1a1a 0%, #0a0a0a 60%);
   color: #ffffff;
   min-height: 100vh;
@@ -600,7 +599,6 @@ img {
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);
-  /* Add a pulsing glow animation */
   animation: pulse-glow 2s infinite;
 }
 

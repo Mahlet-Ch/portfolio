@@ -4,7 +4,6 @@
   position: relative;
   transition: background-color 0.4s ease;
   border-top: 1px solid var(--border-color);
-  /* Add this line to create a clean cut-off at the bottom */
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -16,7 +15,6 @@
 }
 
 .service-card {
-  /* The cards themselves will be the soft background color to pop out */
   background: var(--bg-soft);
   padding: 40px 30px;
   border-radius: 20px;

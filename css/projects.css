@@ -2,8 +2,7 @@
   padding: 110px 0;
   background: var(--bg-main); /* White in light mode */
   transition: background-color 0.4s ease;
-  border-top: 1px solid var(--border-color); /* From previous fix */
-  /* Add this line to create a clean cut-off at the bottom */
+  border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
 }
 

@@ -3,7 +3,6 @@
   color: var(--text-dark);
   background: var(--bg-soft); /* Light gray in light mode */
   transition: background-color 0.4s ease;
-  /* Add this line for a perfectly crisp top edge */
   border-top: 1px solid var(--border-color);
 }
 
