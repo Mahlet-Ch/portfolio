@@ -122,17 +122,47 @@ img {
   gap: 15px;
 }
 
-.logo {
+/* Base Logo Styling */
+.logo h3 {
   font-family: "Playfair Display", serif;
-  font-size: 24px;
-  font-weight: bold;
-  color: #ffffff;
+  font-size: 26px;
+  font-weight: 700;
+  color: #fff;
   letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+  margin: 0;
 }
 
-.logo span {
+/* The Orange M */
+.logo h3 span {
   color: var(--accent);
-  font-size: 28px;
+  font-size: 30px;
+  transition: text-shadow 0.3s ease;
+}
+
+/* The glowing orange dot (kept just in case you want it later) */
+.logo-dot {
+  color: var(--accent);
+  font-size: 30px;
+  line-height: 1;
+}
+
+/* --- NEW: The Clickable Link Styling --- */
+.logo a {
+  text-decoration: none; /* Removes the underline */
+  color: inherit; /* Keeps the text white */
+  display: inline-block; /* Ensures the hover scale works perfectly */
+}
+
+/* Hover effect */
+.logo a:hover h3 {
+  transform: scale(1.02);
+}
+
+.logo a:hover h3 span {
+  text-shadow: 0 0 15px rgba(255, 69, 0, 0.6);
 }
 
 .nav-menu {
